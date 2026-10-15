@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon/Dooffy-Characters-M2.256.png" type="image/x-icon">
+
+  <title>Memórias Matemáticas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #00ccff;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    #status {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    #game-board {
+      display: grid;
+      grid-template-columns: repeat(4, 100px);
+      gap: 10px;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .card {
+      width: 100px;
+      height: 100px;
+      background: #e4f527;
+      color: rgb(10, 29, 200);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .flipped, .matched {
+      background: #df9f08;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧠 Memórias Matemáticas</h1>
+
+  <div id="status">
+    ⏱ Tempo: <span id="tempo">0</span>s |
+    🔢 Tentativas: <span id="tentativas">0</span>
+  </div>
+
+  <div id="game-board"></div>
+  <button onclick="startGame()">🔄 Reiniciar</button>
+
+  <script src="script.Js"></script>
+</body>
+</html>
